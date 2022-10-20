@@ -245,22 +245,3 @@ let rideVolume = document.querySelector("#rideVolume");
 rideVolume.addEventListener("change", function(e) {
 ridesample.volume = e.currentTarget.value / 100;
 })
-
-// Mouse
-
-const cursor = document.querySelector('.cursor');
-var timeout;
-
-document.addEventListener('mousemove', (e) => {
-    let x = e.pageX;
-    let y = e.pageY;
-
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
-    cursor.style.display = "block"
-
-});
-
-document.addEventListener('mouseout', () => {
-    cursor.style.display = 'none';
-})
