@@ -1,0 +1,206 @@
+:root {
+    --yellow: #fefae0;
+    --grey: #bcb8b1;
+    --red: rgb(165, 1, 1);
+    --black: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--yellow);
+}
+
+h1{
+    margin-top: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 0.8rem;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.howToPlay {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.machine-background{
+    background-color: var(--grey);
+    width: 65%;
+    margin: auto;
+    border-radius: 50px;
+    box-shadow: 20px 20px 25px;
+}
+
+.machine {
+    max-width: 500px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    /* grid-auto-rows: minmax(50px, auto); */
+} 
+
+.drum {
+    height: 125px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 10%;
+    box-shadow: 5px 5px;
+}
+
+.drum:active {
+    /* background-color: green; */
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.drum:hover{
+    cursor: pointer;
+}
+
+
+
+input {
+    transform: rotate(-90deg);
+}
+
+#clapVolume, #clapVolume, #hhcVolume, #hhoVolume, #hiTomVolume, #lowTomVolume, #crash1Volume, #crash2Volume, #rideVolume {
+    margin-left: -68px;
+}
+
+
+.mixer {    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+    margin-top: 80px;
+} 
+
+.mixerText {
+    width: 525px;
+    font-size: 0.8rem;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.mixerText p {
+    line-height: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--black);
+    border-radius: 10%;
+    padding: 5px;
+    background-color:beige;
+}
+
+.background {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.mobileSentence {
+    display: none;
+}
+
+@media(max-width: 950px){
+    .howToPlay{
+        display: none;
+    }
+    h3{
+        display: none;
+    }
+    .machine-background {
+        background-color: var(--yellow);
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+
+    }
+    .machine{
+        gap: 40px;
+    }
+}
+
+@media(max-width: 600px){
+
+    body{
+        cursor: none;
+    }
+
+    .drum:hover{
+        cursor: none;
+    }
+
+    .cursor{
+        z-index: 999;
+        position: fixed;
+        background-color: var(--black);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 0 20px,
+        0 0 60px;
+        animation: colours 5s infinite;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+
+    h1{
+        margin-top: 50px;
+    }
+
+    .machine {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 75px 25px;
+        margin: 75px 25px;
+    }
+    .machine-background {
+        background: var(--yellow);
+    }
+
+    #kickVolume, #clapVolume, #hhcVolume, #hhoVolume, #hiTomVolume, #lowTomVolume, #crash1Volume, #crash2Volume, #rideVolume {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+    .mixerText {
+        display: none;
+    }
+    .mobileSentence{
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+}
