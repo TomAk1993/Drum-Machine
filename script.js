@@ -1,7 +1,7 @@
 //audio source files
 
 const clapsample = new Audio();
-clapsample.src = "assets/clap.wav";
+clapsample.src = "assets/snare.wav";
 
 const kicksample = new Audio();
 kicksample.src = "assets/kick.wav";
@@ -41,52 +41,53 @@ const ride = document.getElementById('ride');
 
 // clickable pads to get sound 
 
-kick.addEventListener('click', () => {
+kick.addEventListener('mousedown', () => {
     kicksample.currentTime = 0;
     kicksample.play();
 });
 
-clap.addEventListener('click', () => {
+clap.addEventListener('mousedown', () => {
     clapsample.currentTime = 0;
     clapsample.play();   
 });
 
-hihat.addEventListener('click', () => {
+hihat.addEventListener('mousedown', () => {
     hihatsample.currentTime = 0;
     hihatsample.play();   
 });
 
-hihat2.addEventListener('click', () => {
+hihat2.addEventListener('mousedown', () => {
     hihatsample2.currentTime = 0;
     hihatsample2.play();   
 });
 
-hitom.addEventListener('click', () => {
+hitom.addEventListener('mousedown', () => {
     hitomsample.currentTime = 0;
     hitomsample.play();   
 });
 
-lowtom.addEventListener('click', () => {
+lowtom.addEventListener('mousedown', () => {
     lowtomsample.currentTime = 0;
     lowtomsample.play();   
 });
 
-crash1.addEventListener('click', () => {
+crash1.addEventListener('mousedown', () => {
     crash1sample.currentTime = 0;
     crash1sample.play();   
 });
 
-crash2.addEventListener('click', () => {
+crash2.addEventListener('mousedown', () => {
     crash2sample.currentTime = 0;
     crash2sample.play();   
 });
 
-ride.addEventListener('click', () => {
+ride.addEventListener('mousedown', () => {
     ridesample.currentTime = 0;
     ridesample.play();   
 });
 
 // keyboard keys to get sound
+// keydown events for keyboard down
 
 window.addEventListener('keydown', (e) =>{
     switch (e.code) {
@@ -152,6 +153,8 @@ window.addEventListener('keydown', (e) =>{
 
     }
 });
+
+// key up for keyboard use
 
 window.addEventListener('keyup', (e) =>{
     switch (e.code) {

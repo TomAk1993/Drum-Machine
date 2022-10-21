@@ -1,8 +1,11 @@
 :root {
     --yellow: #fefae0;
-    --grey: #bcb8b1;
+    --grey: #6d6d6d;
     --red: rgb(165, 1, 1);
     --black: black;
+    --white: rgb(255, 255, 255);
+    --beige: beige;
+    --greylight:  #a1a1a1;
 }
 
 *{
@@ -57,14 +60,13 @@ h3 {
     height: 125px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--black);
+    color: var(--greylight);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--red);
+    background-color: var(--black);
     border-radius: 10%;
-    box-shadow: 5px 5px;
-    color: var(--black);
+    box-shadow: 5px 5px 5px var(--red);
 }
 
 .drum:active {
@@ -84,6 +86,7 @@ h3 {
 input {
     transform: rotate(-90deg);
 }
+
 
 #clapVolume, #clapVolume, #hhcVolume, #hhoVolume, #hiTomVolume, #lowTomVolume, #crash1Volume, #crash2Volume, #rideVolume {
     margin-left: -68px;
@@ -108,7 +111,10 @@ input {
 }
 
 .mixerText p {
+    background-color: var(--beige);
+    color: var(--black);
     line-height: 1rem;
+    font-weight: 900;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -116,7 +122,6 @@ input {
     border: 1px solid var(--black);
     border-radius: 10%;
     padding: 5px;
-    background-color:beige;
 }
 
 .background {
