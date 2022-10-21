@@ -11,13 +11,12 @@
     <title>Music Player</title>
 </head>
 <body>
-    <div class="cursor"></div>
     <div class="machine-background">
         <h1>DRUM MACHINE</h1>
         <h3>How to play on the keyboard</h3>
         <div class="howToPlay">
             <p>C = Kick</p>
-            <p>V = Clap</p>
+            <p>V = Snare</p>
             <p>F = Hi Tom</p>
             <p>J = Low Tom</p>
         </div>
@@ -37,21 +36,21 @@
             <button id="hitom" class="drum">Hi Tom</button>
             <button id="lowtom" class="drum">Low Tom</button>
             <button id="kick" class="drum">Kick</button>
-            <button id="clap" class="drum">Clap</button>
+            <button id="clap" class="drum">Snare</button>
             <button id="hihat" class="drum">Hi Hat Closed</button>
             
         </div>
 
         <div class="mixer">
-            <input id="kickVolume" type="range">
-            <input id="clapVolume" type="range">
-            <input id="hhcVolume" type="range">
-            <input id="hhoVolume" type="range">
-            <input id="hiTomVolume" type="range">
-            <input id="lowTomVolume" type="range">
-            <input id="crash1Volume" type="range">
-            <input id="crash2Volume" type="range">
-            <input id="rideVolume" type="range">
+            <input id="kickVolume" type="range" min="1" max="100" value="50" >
+            <input id="clapVolume" type="range" min="1" max="100" value="50" >
+            <input id="hhcVolume" type="range" min="1" max="100" value="25" >
+            <input id="hhoVolume" type="range" min="1" max="100" value="25">
+            <input id="hiTomVolume" type="range" min="1" max="100" value="50">
+            <input id="lowTomVolume" type="range" min="1" max="100" value="50">
+            <input id="crash1Volume" type="range" min="1" max="100" value="30">
+            <input id="crash2Volume" type="range" min="1" max="100" value="30">
+            <input id="rideVolume" type="range" min="1" max="100" value="40">
 
         </div>
         <div class="mixerText">
