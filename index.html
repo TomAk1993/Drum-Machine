@@ -6,66 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Music Player</title>
 </head>
 <body>
-    <div class="machine-background">
-        <h1>DRUM MACHINE</h1>
-        <h3>How to play on the keyboard</h3>
-        <div class="howToPlay">
-            <p>C = Kick</p>
-            <p>V = Snare</p>
-            <p>F = Hi Tom</p>
-            <p>J = Low Tom</p>
-        </div>
-        <div class="howToPlay">
-            <p>G = Closed Hi Hat</p>
-            <p>H = Open Hi Hat</p>
-            <p>T = Crash 1</p>
-            <p>Y = Crash 2</p>
-            <p>U = Ride</p>
-        </div>
+        <div class="machine-background">
+            <h1>DRUM MACHINE</h1>
+            <h2>How to play on the keyboard</h2>
+            <div class="howToPlay">
+                <p>C = Kick</p>
+                <p class="centeredTop">V = Snare</p>
+                <p>F = Hi Tom</p>
+            </div>
+            <div class="howToPlay">
+                <p>J = Low Tom</p>
+                <p class="centeredMiddle" >G = Closed Hi Hat</p>
+                <p>H = Open Hi Hat</p>
+            </div>
+            <div class="howToPlay">
+                <p>T = Crash 1</p>
+                <p class="centeredBottom">Y = Crash 2</p>
+                <p>U = Ride</p>
+            </div>
 
-        <div class="machine">
-            <button id="crash1" class="drum">Crash 1</button>
-            <button id="crash2" class="drum">Crash 2</button>
-            <button id="ride" class="drum">Ride</button>
-            <button id="hihat2" class="drum">Hi Hat Open</button>
-            <button id="hitom" class="drum">Hi Tom</button>
-            <button id="lowtom" class="drum">Low Tom</button>
-            <button id="kick" class="drum">Kick</button>
-            <button id="clap" class="drum">Snare</button>
-            <button id="hihat" class="drum">Hi Hat Closed</button>
-            
-        </div>
+            <div class="machine">
+                <button id="crash1" class="drum">Crash 1</button>
+                <button id="crash2" class="drum">Crash 2</button>
+                <button id="ride" class="drum">Ride</button>
+                <button id="hihat2" class="drum">Hi Hat Open</button>
+                <button id="hitom" class="drum">Hi Tom</button>
+                <button id="lowtom" class="drum">Low Tom</button>
+                <button id="kick" class="drum">Kick</button>
+                <button id="clap" class="drum">Snare</button>
+                <button id="hihat" class="drum">Hi Hat Closed</button>
+                
+            </div>
 
-        <div class="mixer">
-            <input id="kickVolume" type="range" min="1" max="100" value="50" >
-            <input id="clapVolume" type="range" min="1" max="100" value="50" >
-            <input id="hhcVolume" type="range" min="1" max="100" value="25" >
-            <input id="hhoVolume" type="range" min="1" max="100" value="25">
-            <input id="hiTomVolume" type="range" min="1" max="100" value="50">
-            <input id="lowTomVolume" type="range" min="1" max="100" value="50">
-            <input id="crash1Volume" type="range" min="1" max="100" value="30">
-            <input id="crash2Volume" type="range" min="1" max="100" value="30">
-            <input id="rideVolume" type="range" min="1" max="100" value="40">
+            <div class="mixer">
+                <input class="kick-volume" id="kickVolume" type="range" min="1" max="100" value="50" >
+                <input class="volume" id="clapVolume" type="range" min="1" max="100" value="50" >
+                <input class="volume" id="hhcVolume" type="range" min="1" max="100" value="25" >
+                <input class="volume" id="hhoVolume" type="range" min="1" max="100" value="25">
+                <input class="volume" id="hiTomVolume" type="range" min="1" max="100" value="50">
+                <input class="volume" id="lowTomVolume" type="range" min="1" max="100" value="50">
+                <input class="volume" id="crash1Volume" type="range" min="1" max="100" value="30">
+                <input class="volume" id="crash2Volume" type="range" min="1" max="100" value="30">
+                <input class="volume" id="rideVolume" type="range" min="1" max="100" value="40">
 
+            </div>
+            <div class="mixerText">
+                <p>Kick</p>
+                <p>Snare</p>
+                <p>Hi Hat <br> C</p>
+                <p>Hi Hat <br> O</p>
+                <p>Hi <br> Tom</p>
+                <p>Low <br> Tom</p>
+                <p>Crash <br> 1</p>
+                <p>Crash <br> 2</p>
+                <p>Ride</p>
+            </div>
+            <p class="mobileSentence">To see the drum machine with all features please use on a desktop PC</p> 
         </div>
-        <div class="mixerText">
-            <p>Kick</p>
-            <p>Snare</p>
-            <p>Hi Hat <br> C</p>
-            <p>Hi Hat <br> O</p>
-            <p>Hi <br> Tom</p>
-            <p>Low <br> Tom</p>
-            <p>Crash <br> 1</p>
-            <p>Crash <br> 2</p>
-            <p>Ride</p>
-        </div> 
-    </div>
-    <p class="mobileSentence">To see the drum machine with all features please use on a desktop PC</p>
     <script src="script.js"></script>
 </body>
 </html> 

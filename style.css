@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 :root {
     --yellow: #fefae0;
-    --grey: #6d6d6d;
+    --grey: #484747;
     --red: rgb(165, 1, 1);
-    --black: black;
-    --white: rgb(255, 255, 255);
+    --off-black: rgb(18, 18, 18);
+        --white: rgba(255, 255, 255, 0.847);
     --beige: beige;
     --greylight:  #a1a1a1;
 }
@@ -16,35 +17,61 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--yellow);
+    background: url('https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+.machine-background {
+    background-color: var(--off-black);
+    width: 800px;
+    margin: 2rem auto 0 auto;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 1) 0px 19px 38px, 
+    rgba(0, 0, 0, 1) 15px 15px 12px;
+}
+
+.centeredTop {
+    margin-left: 15px;
+}
+.centeredMiddle {
+    margin-left: 20px;
+}
+.centeredBottom {
+    margin-right: 20px;
 }
 
 h1{
-    margin-top: 20px;
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: 3rem;
-    letter-spacing: 0.8rem;
+    padding-top: 1.5rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
     text-align: center;
+    color: var(--white);
 }
 
-h3 {
+h2 {
     text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--white);
 }
 
 .howToPlay {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
+    justify-content: space-between;
+    width: 475px;
+    margin: auto;
+    color: var(--white);
+    font-size: 14px;
+}
+    
+.centered {
+    text-align: center;
 }
 
-.machine-background{
-    background-color: var(--grey);
-    width: 65%;
-    margin: auto;
-    border-radius: 50px;
-    box-shadow: 20px 20px 25px;
-}
 
 .machine {
     max-width: 500px;
@@ -53,24 +80,22 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    /* grid-auto-rows: minmax(50px, auto); */
 } 
 
 .drum {
     height: 125px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    color: var(--greylight);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black);
-    border-radius: 10%;
-    box-shadow: 5px 5px 5px var(--red);
+    color: var(--white);
+        display: grid;
+        place-items: center;
+        background-color: black;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 7px var(--red);
+    border: none;
 }
 
 .drum:active {
-    /* background-color: green; */
     box-shadow: none;
     position: relative;
     top: 5px;
@@ -87,9 +112,61 @@ input {
     transform: rotate(-90deg);
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; 
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    height: 10px;
+    background: #ccc;
+}
 
-#clapVolume, #clapVolume, #hhcVolume, #hhoVolume, #hiTomVolume, #lowTomVolume, #crash1Volume, #crash2Volume, #rideVolume {
-    margin-left: -68px;
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1)
+  }
+  input[type="range"]:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(0, 0, 0, 0.2)
+  }
+  input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(0, 0, 0, 0.2)
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1)
+  }
+  input[type="range"]:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(0, 0, 0, 0.2)
+  }
+  input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(0, 0, 0, 0.2)    
+  }
+
+
+
+
+.volume {
+    margin-left: -69px;
 }
 
 
@@ -111,17 +188,14 @@ input {
 }
 
 .mixerText p {
-    background-color: var(--beige);
-    color: var(--black);
-    line-height: 1rem;
-    font-weight: 900;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--black);
+    background-color: var(--white);
+        color: black;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+        text-align: center;
     border-radius: 10%;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 .background {
@@ -135,59 +209,75 @@ input {
     display: none;
 }
 
-@media(max-width: 950px){
-    .howToPlay{
-        display: none;
-    }
-    h3{
-        display: none;
-    }
+@media(max-width: 825px) {
     .machine-background {
-        background-color: var(--yellow);
         width: 100%;
         border-radius: 0;
         box-shadow: none;
 
     }
-    .machine{
-        gap: 40px;
-    }
 }
 
 @media(max-width: 600px){
 
-    .drum{
-        height: 100px;
-    }
-
-    h1{
-        margin-top: 50px;
-    }
-
-    .machine {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 75px 25px;
-        margin: 75px 25px;
-    }
+    body {
+            background: none;
+            background-color: var(--off-black);
+        }
     .machine-background {
-        background: var(--yellow);
+        margin-top: 0;
+    }
+    .machine {
+        gap: 15px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
-    #kickVolume, #clapVolume, #hhcVolume, #hhoVolume, #hiTomVolume, #lowTomVolume, #crash1Volume, #crash2Volume, #rideVolume {
+    h2 {
         display: none;
     }
 
+    .howToPlay {
+        display: none;
+    }
+
+    .drum {
+        font-size: 1.125rem;
+    }
+
     h1 {
-        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        font-size: 2rem;
     }
     .mixerText {
+        display: none;
+    }   
+    .volume,
+    .kick-volume {
         display: none;
     }
     .mobileSentence{
         display: block;
         text-align: center;
-        font-size: 1.5rem;
-        padding: 20px;
+        font-size: 18px;
+        margin: 0 1rem;
+        font-weight: 300;
+        color: var(--white);
+            padding-bottom: 1.5rem;
+        }
+    .mixer {
+        margin: 0;
+        padding-top: 1.5rem;
     }
 }
+
+@media (max-width: 450px) {
+    .drum {
+        font-size: 1.125rem;
+        height: 100px;
+        width: 100px;
+        }
+}
+
+
+
