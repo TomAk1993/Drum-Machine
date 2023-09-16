@@ -39,54 +39,134 @@ const crash1 = document.getElementById('crash1');
 const crash2 = document.getElementById('crash2');
 const ride = document.getElementById('ride');
 
-// clickable pads to get sound 
 
-kick.addEventListener('mousedown', () => {
+kick.addEventListener("mousedown", kickClick, false);
+function kickClick(e) {
     kicksample.currentTime = 0;
     kicksample.play();
-});
+    e.preventDefault();
+}
 
-clap.addEventListener('mousedown', () => {
+kick.addEventListener("touchStart", kickTouch, false);
+function kickTouch(e) {
+    kicksample.currentTime = 0;
+    kicksample.play();
+    e.preventDefault();
+}
+
+clap.addEventListener("mousedown", clapClick, false);
+function clapClick(e) {
     clapsample.currentTime = 0;
-    clapsample.play();   
-});
+    clapsample.play(); 
+    e.preventDefault();
+}
 
-hihat.addEventListener('mousedown', () => {
+clap.addEventListener("touchStart", clapTouch, false);
+function clapTouch(e) {
+    clapsample.currentTime = 0;
+    clapsample.play(); 
+    e.preventDefault();
+}
+
+hihat.addEventListener("mousedown", hhClick, false);
+function hhClick(e) {
     hihatsample.currentTime = 0;
     hihatsample.play();   
-});
+    e.preventDefault();
+}
 
-hihat2.addEventListener('mousedown', () => {
+hihat.addEventListener("touchStart", hhTouch, false);
+function hhTouch(e) {
+    hihatsample.currentTime = 0;
+    hihatsample.play();   
+    e.preventDefault();
+}
+
+hihat2.addEventListener("mousedown", hh2Click, false);
+function hh2Click(e) {
     hihatsample2.currentTime = 0;
     hihatsample2.play();   
-});
+    e.preventDefault();
+}
 
-hitom.addEventListener('mousedown', () => {
+hihat2.addEventListener("touchStart", hh2Touch, false);
+function hh2Touch(e) {
+    hihatsample2.currentTime = 0;
+    hihatsample2.play();   
+    e.preventDefault();
+}
+
+hitom.addEventListener("mousedown", hitomClick, false);
+function hitomClick(e) {
     hitomsample.currentTime = 0;
-    hitomsample.play();   
-});
+    hitomsample.play();  
+    e.preventDefault();
+}
 
-lowtom.addEventListener('mousedown', () => {
+hitom.addEventListener("touchStart", hitomTouch, false);
+function hitomTouch(e) {
+    hitomsample.currentTime = 0;
+    hitomsample.play();     
+    e.preventDefault();
+}
+
+lowtom.addEventListener("mousedown", lowtomClick, false);
+function lowtomClick(e) {
+    lowtomsample.currentTime = 0;
+    lowtomsample.play(); 
+    e.preventDefault();
+}
+
+lowtom.addEventListener("touchStart", lowtomTouch, false);
+function lowtomTouch(e) {
     lowtomsample.currentTime = 0;
     lowtomsample.play();   
-});
+    e.preventDefault();
+}
 
-crash1.addEventListener('mousedown', () => {
+crash1.addEventListener("mousedown", crash1Click, false);
+function crash1Click(e) {
     crash1sample.currentTime = 0;
-    crash1sample.play();   
-});
+    crash1sample.play(); 
+    e.preventDefault();
+}
 
-crash2.addEventListener('mousedown', () => {
+crash1.addEventListener("touchStart", crash1Touch, false);
+function crash1Touch(e) {
+    crash1sample.currentTime = 0;
+    crash1sample.play();  
+    e.preventDefault();
+}
+
+crash2.addEventListener("mousedown", crash2Click, false);
+function crash2Click(e) {
     crash2sample.currentTime = 0;
     crash2sample.play();   
-});
+    e.preventDefault();
+}
 
-ride.addEventListener('mousedown', () => {
+crash2.addEventListener("touchStart", crash2Touch, false);
+function crash2Touch(e) {
+    crash2sample.currentTime = 0;
+    crash2sample.play();    
+    e.preventDefault();
+}
+
+ride.addEventListener("mousedown", rideClick, false);
+function rideClick(e) {
     ridesample.currentTime = 0;
     ridesample.play();   
-});
+    e.preventDefault();
+}
 
-// keyboard keys to get sound
+ride.addEventListener("touchStart", rideTouch, false);
+function rideTouch(e) {
+    ridesample.currentTime = 0;
+    ridesample.play(); 
+    e.preventDefault();
+}
+
+
 // keydown events for keyboard down
 
 window.addEventListener('keydown', (e) =>{
@@ -202,7 +282,7 @@ window.addEventListener('keyup', (e) =>{
     }
 });
 
-// Making Range Sliders Work
+// Mixer
 
 let kickVolume = document.querySelector("#kickVolume");
 kickVolume.addEventListener("change", function(e) {
