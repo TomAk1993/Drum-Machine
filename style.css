@@ -209,12 +209,12 @@ input[type="range"]::-webkit-slider-thumb {
     display: none;
 }
 
-@media(max-width: 825px) {
+@media(max-width: 800px) {
     .machine-background {
         width: 100%;
         border-radius: 0;
-        box-shadow: none;
-
+        box-shadow: rgba(0, 0, 0, 1) 0px 19px 38px, 
+        rgba(0, 0, 0, 1) 15px 15px 12px;
     }
 }
 
@@ -226,6 +226,7 @@ input[type="range"]::-webkit-slider-thumb {
         }
     .machine-background {
         margin-top: 0;
+        box-shadow: none;
     }
     .machine {
         gap: 15px;
