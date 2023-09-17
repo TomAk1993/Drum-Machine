@@ -39,14 +39,13 @@ const crash1 = document.getElementById('crash1');
 const crash2 = document.getElementById('crash2');
 const ride = document.getElementById('ride');
 
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchpoints > 0 || navigator.msMaxTouchPoints > 0;
 
 
 // click events for non touch devices.
 
 if(!isTouchDevice) {
 
-        console.log("not touch")
     kick.addEventListener("mousedown", () => {
         kicksample.currentTime = 0;
         kicksample.play();
@@ -95,59 +94,58 @@ if(!isTouchDevice) {
 }
 
 // Touch events for touch devices
+
 if(isTouchDevice) {
 
-console.log("Is touch");
-
-    kick.addEventListener("touchStart", (e) => {
+    kick.addEventListener('touchstart', (e) => {
         e.preventDefault();
         kicksample.currentTime = 0;
         kicksample.play();
     });
 
-    clap.addEventListener("touchStart", (e) => {
+    clap.addEventListener('touchstart', (e) => {
         e.preventDefault();
         clapsample.currentTime = 0;
         clapsample.play(); 
     });
     
-    hihat.addEventListener("touchStart", (e) => {
+    hihat.addEventListener('touchstart', (e) => {
         e.preventDefault();
         hihatsample.currentTime = 0;
         hihatsample.play();   
     });
 
-    hihat2.addEventListener("touchStart", (e) => {
+    hihat2.addEventListener('touchstart', (e) => {
         e.preventDefault();
         hihatsample2.currentTime = 0;
         hihatsample2.play();   
     });
 
-    hitom.addEventListener("touchStart", (e) => {
+    hitom.addEventListener('touchstart', (e) => {
         e.preventDefault();
         hitomsample.currentTime = 0;
         hitomsample.play();     
     });
 
-    lowtom.addEventListener("touchStart", (e) => {
+    lowtom.addEventListener('touchstart', (e) => {
         e.preventDefault();
         lowtomsample.currentTime = 0;
         lowtomsample.play();   
     });
     
-    crash1.addEventListener("touchStart", (e) => {
+    crash1.addEventListener('touchstart', (e) => {
         e.preventDefault();
         crash1sample.currentTime = 0;
         crash1sample.play();  
     });
 
-    crash2.addEventListener("touchStart", (e) => {
+    crash2.addEventListener('touchstart', (e) => {
         e.preventDefault();
         crash2sample.currentTime = 0;
         crash2sample.play();    
     });
 
-    ride.addEventListener("touchStart", (e) => {
+    ride.addEventListener('touchstart', (e) => {
         e.preventDefault();
         ridesample.currentTime = 0;
         ridesample.play(); 
