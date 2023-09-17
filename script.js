@@ -39,133 +39,120 @@ const crash1 = document.getElementById('crash1');
 const crash2 = document.getElementById('crash2');
 const ride = document.getElementById('ride');
 
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
 
-kick.addEventListener("mousedown", kickClick, false);
-function kickClick(e) {
-    kicksample.currentTime = 0;
-    kicksample.play();
-    e.preventDefault();
+
+// click events for non touch devices.
+
+if(!isTouchDevice) {
+
+        console.log("not touch")
+    kick.addEventListener("mousedown", () => {
+        kicksample.currentTime = 0;
+        kicksample.play();
+    });
+
+    clap.addEventListener("mousedown", () => {
+        clapsample.currentTime = 0;
+        clapsample.play(); 
+    });
+
+    hihat.addEventListener("mousedown", () => {
+        hihatsample.currentTime = 0;
+        hihatsample.play();   
+    });
+
+    hihat2.addEventListener("mousedown", () => {
+        hihatsample2.currentTime = 0;
+        hihatsample2.play();   
+    });
+
+    hitom.addEventListener("mousedown", () => {
+        hitomsample.currentTime = 0;
+        hitomsample.play();  
+    });
+
+    lowtom.addEventListener("mousedown", () => {
+        lowtomsample.currentTime = 0;
+        lowtomsample.play(); 
+    });
+
+    crash1.addEventListener("mousedown", () => {
+        crash1sample.currentTime = 0;
+        crash1sample.play(); 
+    });
+
+    crash2.addEventListener("mousedown", () => {
+        crash2sample.currentTime = 0;
+        crash2sample.play(); 
+    });
+
+    ride.addEventListener("mousedown", () => {
+        ridesample.currentTime = 0;
+        ridesample.play();   
+    });
+
 }
 
-kick.addEventListener("touchStart", kickTouch, false);
-function kickTouch(e) {
-    kicksample.currentTime = 0;
-    kicksample.play();
-    e.preventDefault();
-}
+// Touch events for touch devices
+if(isTouchDevice) {
 
-clap.addEventListener("mousedown", clapClick, false);
-function clapClick(e) {
-    clapsample.currentTime = 0;
-    clapsample.play(); 
-    e.preventDefault();
-}
+console.log("Is touch");
 
-clap.addEventListener("touchStart", clapTouch, false);
-function clapTouch(e) {
-    clapsample.currentTime = 0;
-    clapsample.play(); 
-    e.preventDefault();
-}
+    kick.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        kicksample.currentTime = 0;
+        kicksample.play();
+    });
 
-hihat.addEventListener("mousedown", hhClick, false);
-function hhClick(e) {
-    hihatsample.currentTime = 0;
-    hihatsample.play();   
-    e.preventDefault();
-}
+    clap.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        clapsample.currentTime = 0;
+        clapsample.play(); 
+    });
+    
+    hihat.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        hihatsample.currentTime = 0;
+        hihatsample.play();   
+    });
 
-hihat.addEventListener("touchStart", hhTouch, false);
-function hhTouch(e) {
-    hihatsample.currentTime = 0;
-    hihatsample.play();   
-    e.preventDefault();
-}
+    hihat2.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        hihatsample2.currentTime = 0;
+        hihatsample2.play();   
+    });
 
-hihat2.addEventListener("mousedown", hh2Click, false);
-function hh2Click(e) {
-    hihatsample2.currentTime = 0;
-    hihatsample2.play();   
-    e.preventDefault();
-}
+    hitom.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        hitomsample.currentTime = 0;
+        hitomsample.play();     
+    });
 
-hihat2.addEventListener("touchStart", hh2Touch, false);
-function hh2Touch(e) {
-    hihatsample2.currentTime = 0;
-    hihatsample2.play();   
-    e.preventDefault();
-}
+    lowtom.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        lowtomsample.currentTime = 0;
+        lowtomsample.play();   
+    });
+    
+    crash1.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        crash1sample.currentTime = 0;
+        crash1sample.play();  
+    });
 
-hitom.addEventListener("mousedown", hitomClick, false);
-function hitomClick(e) {
-    hitomsample.currentTime = 0;
-    hitomsample.play();  
-    e.preventDefault();
-}
+    crash2.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        crash2sample.currentTime = 0;
+        crash2sample.play();    
+    });
 
-hitom.addEventListener("touchStart", hitomTouch, false);
-function hitomTouch(e) {
-    hitomsample.currentTime = 0;
-    hitomsample.play();     
-    e.preventDefault();
+    ride.addEventListener("touchStart", (e) => {
+        e.preventDefault();
+        ridesample.currentTime = 0;
+        ridesample.play(); 
+    });
 }
-
-lowtom.addEventListener("mousedown", lowtomClick, false);
-function lowtomClick(e) {
-    lowtomsample.currentTime = 0;
-    lowtomsample.play(); 
-    e.preventDefault();
-}
-
-lowtom.addEventListener("touchStart", lowtomTouch, false);
-function lowtomTouch(e) {
-    lowtomsample.currentTime = 0;
-    lowtomsample.play();   
-    e.preventDefault();
-}
-
-crash1.addEventListener("mousedown", crash1Click, false);
-function crash1Click(e) {
-    crash1sample.currentTime = 0;
-    crash1sample.play(); 
-    e.preventDefault();
-}
-
-crash1.addEventListener("touchStart", crash1Touch, false);
-function crash1Touch(e) {
-    crash1sample.currentTime = 0;
-    crash1sample.play();  
-    e.preventDefault();
-}
-
-crash2.addEventListener("mousedown", crash2Click, false);
-function crash2Click(e) {
-    crash2sample.currentTime = 0;
-    crash2sample.play();   
-    e.preventDefault();
-}
-
-crash2.addEventListener("touchStart", crash2Touch, false);
-function crash2Touch(e) {
-    crash2sample.currentTime = 0;
-    crash2sample.play();    
-    e.preventDefault();
-}
-
-ride.addEventListener("mousedown", rideClick, false);
-function rideClick(e) {
-    ridesample.currentTime = 0;
-    ridesample.play();   
-    e.preventDefault();
-}
-
-ride.addEventListener("touchStart", rideTouch, false);
-function rideTouch(e) {
-    ridesample.currentTime = 0;
-    ridesample.play(); 
-    e.preventDefault();
-}
-
 
 // keydown events for keyboard down
 
